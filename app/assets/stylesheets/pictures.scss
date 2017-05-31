@@ -1,0 +1,54 @@
+// Place all the styles related to the pictures controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cf{zoom:1;}
+.cf:after{
+  content:"";
+  display: table;
+  clear: both;
+ }
+
+
+#head_menu{
+    padding: 0;
+    height: 7rem;
+    margin: 0;
+    li{
+      float: left;
+      a{
+        color: #595757;
+
+  }
+}
+}
+.interval{
+  margin: 3rem;
+}
+.fixed_sign{
+  width: 180px;
+  img{
+    width: 100%;
+  }
+
+}
+
+body{
+  background-color: #E6E6E6;
+}
+header{
+  background-color: #fff;
+}
+.wrap{
+  width: 60%;
+  margin: 0 auto;
+}
+.name_area{
+  float: left;
+  width: 80%;
+  padding: 1%;
+}
+.image_area{
+  float: left;
+  width: 5%;
+}

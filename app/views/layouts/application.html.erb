@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+      <ul id ="head_menu" class="cf">
+      <li class="fixed_sign"><%= link_to image_tag("/rogo.png"), root_path %></li>
+      <% if user_signed_in?%>
+        <li class="interval"><%= link_to 'マイページ', mypage_pictures_path(current_user.id) %></li>
+        <li class="interval"><%= link_to '登録内容変更', edit_user_registration_path(current_user.id) %></li>
+        <li class="interval"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+        <li class="interval"><%= link_to '投稿する', new_picture_path %></li>
+      <% else %>
+        <li class="interval"><%= link_to 'ログイン' , new_user_session_path %></li>
+        <li class="interval"><%= link_to '新規登録' , new_user_registration_path %></li>
+      <% end %>
+      </ul>
+
+  </header>
+  <div class="container">
+    <p class="notice"><%= notice %></p>
+ 　　<p class="alert"><%= alert %></p>
+
+<%= yield %>
+  </div>
+
+</body>
+</html>

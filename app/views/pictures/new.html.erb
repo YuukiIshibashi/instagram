@@ -1,0 +1,14 @@
+  <div class="wrap">
+
+<%= form_for(@picture) do |f| %>
+    <br>
+  <%= f.text_field :title, placeholder: "タイトル", class: "form-control" %>
+  <br>
+  <%= f.text_field :content, placeholder: "本文", class: "form-control" %>
+  <br>
+  <%= f.file_field :image %>
+
+  <br>
+  <%= f.submit %>
+<% end %>
+</div>
