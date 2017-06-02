@@ -33,6 +33,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'execjs'
 gem 'therubyracer'
+gem 'cancan'
 gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password

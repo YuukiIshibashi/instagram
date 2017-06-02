@@ -1,15 +1,13 @@
 <div class="wrap">
 
-    <p><%= user_profile_img(@user) %></p>
-    <img src="<%= @user.image_url %>">
+  <ul class="cf">
+    <li class="image_area"><%= user_profile_img(@user) %></li>
+    <li  class="name_area"><%= @user.name %>さんが投稿した写真</li>
+  </ul>
 
 <br>
 
 <% @pictures.each do |picture| %>
-  <ul class="cf">
-    <li class="image_area"><%= user_profile_img(picture.user) %></li>
-    <li  class="name_area"><%= picture.user.name %>さん</li>
-  </ul>
   <br>
   <p><%= image_tag picture.image.url %></p>
   <p>タイトル:<%= picture.title %></p>
