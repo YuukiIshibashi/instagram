@@ -42,6 +42,7 @@ class PicturesController < ApplicationController
   end
 
   def mypage
+    @user = current_user
     @pictures = Picture.where(user_id: current_user.id)
   end
 

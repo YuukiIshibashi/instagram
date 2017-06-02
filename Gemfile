@@ -24,10 +24,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 gem 'devise'
-gem 'rmagick', require: 'RMagick'
+gem 'rmagick'
 gem 'rails_admin'
 gem 'pry-rails'
 gem 'twitter-bootstrap-rails'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'execjs'
+gem 'therubyracer'
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
