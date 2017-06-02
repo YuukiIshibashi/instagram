@@ -1,7 +1,7 @@
 module ApplicationHelper
   def user_profile_img(user)
     unless user.provider.blank?
-      img_url = user.image_url
+      img_url = 'user.image_url'
     else
       img_url = 'no_image.png'
     end
