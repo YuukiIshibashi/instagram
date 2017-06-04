@@ -11,5 +11,6 @@
   <p><%= image_tag picture.image.url %></p>
   <p>タイトル:<%= picture.title %></p>
   <p><%= picture.content %></p>
+  <%= link_to "詳細",picture_path(picture.id) %>
 <% end %>
   </div>
