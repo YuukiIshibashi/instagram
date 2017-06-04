@@ -42,6 +42,8 @@ header{
 .wrap{
   width: 60%;
   margin: 0 auto;
+  padding: 5%;
+  background-color: rgba(256, 256, 256, 0.5);
   img{
     width: 100%;
   }
@@ -53,5 +55,28 @@ header{
 }
 .image_area{
   float: left;
-  width: 5%;
+  width: 10%;
+  img{
+    border-radius: 50%;
+  }
+}
+.name_area2{
+  font-size: 3rem;
+  float: left;
+  width: 60%;
+  padding: 1%;
+}
+.image_area2{
+  float: left;
+  width: 30%;
+  img{
+    border-radius: 50%;
+  }
+}
+a:hover{
+  opacity: 0.5;
+}
+.picture_title{
+  font-weight: bold;
+  font-size: 2rem;
 }

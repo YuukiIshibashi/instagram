@@ -1,16 +1,12 @@
 <div class="wrap">
 
-<br>
-
 <% @pictures.each do |picture| %>
   <ul class="cf">
     <li class="image_area"><%= user_profile_img(picture.user) %></li>
     <li  class="name_area"><%= picture.user.name %>さん</li>
   </ul>
   <br>
-  <p><%= image_tag picture.image.url %></p>
-  <p>タイトル:<%= picture.title %></p>
-  <p><%= picture.content %></p>
-  <%= link_to "詳細",picture_path(picture.id) %>
+  <p><%= link_to image_tag(picture.image.url), picture_path(picture.id) %></p>
+  <p class="picture_title"><%= picture.title %></p>
 <% end %>
-  </div>
+</div>

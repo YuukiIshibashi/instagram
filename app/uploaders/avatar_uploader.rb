@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class AvatarUploader < CarrierWave::Uploader::Base
+  include CarrierWave::RMagick
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -15,6 +16,14 @@ class AvatarUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
+
+  def create_square
+    manipulate! do |img|
+      narrow = img.columns > img.rows ? img.rows : img.columns
+      img.crop(Magick::CenterGravity, narrow, narrow).resize(300, 300)
+    end
+  end
+  process :create_square
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
