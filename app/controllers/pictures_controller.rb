@@ -9,6 +9,7 @@ class PicturesController < ApplicationController
 
   def index
     @pictures = Picture.all
+    @pictures =@pictures.order("created_at DESC")
   end
 
   def show
