@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-  has_many :pictures
+  validates :name, presence: true
+  validates :email, presence: true
+  has_many :pictures, dependent: :destroy
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.find_by(email: auth.info.email)
