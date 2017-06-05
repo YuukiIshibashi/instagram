@@ -6,7 +6,18 @@
     <li  class="name_area"><%= picture.user.name %>さん</li>
   </ul>
   <br>
-  <p><%= link_to image_tag(picture.image.url), picture_path(picture.id) %></p>
+  <figure class="picture_area">
+  <%= link_to image_tag(picture.image.url), picture_path(picture.id) %>
+  <% if picture.user == current_user %>
+  <ul class="icon cf">
+    <li><%=link_to '', picture_path(picture.id), class: "fa fa-trash-o fa-lg", method: :delete%></li>
+    <li><%=link_to '', edit_picture_path(picture.id), class: "fa fa-edit fa-lg"%></li>
+  <ul>
+  <% end %>
+  </figure>
   <p class="picture_title"><%= picture.title %></p>
+  <br>
+  <br>
 <% end %>
+
 </div>

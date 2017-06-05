@@ -80,3 +80,22 @@ a:hover{
   font-weight: bold;
   font-size: 2rem;
 }
+.picture_area{
+  position: relative;
+  margin: 0;
+}
+.icon{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  margin: 0;
+  width: 30%;
+  li{
+    float: right;
+    padding: 5%;
+  a{
+    color: #fff;
+  }
+}
+}

@@ -30,7 +30,7 @@ class PicturesController < ApplicationController
 
   def update
     if @picture.update(pictures_params)
-    redirect_to blogs_path
+    redirect_to pictures_path
     else
       render action: 'edit'
     end
@@ -52,7 +52,7 @@ class PicturesController < ApplicationController
     end
 
     def set_picture
-      @pictures = Picture.find(params[:id])
+      @picture = Picture.find(params[:id])
     end
 
 end

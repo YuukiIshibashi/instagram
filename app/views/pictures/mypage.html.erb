@@ -6,8 +6,16 @@
   </ul>
   <br>
   <% @pictures.each do |picture| %>
-  <p><%= image_tag picture.image.url %></p>
+  <figure class="picture_area">
+  <%= image_tag picture.image.url %>
+  <ul class="icon cf">
+    <li><%=link_to '', picture_path(picture.id), class: "fa fa-trash-o fa-lg", method: :delete%></li>
+    <li><%=link_to '', edit_picture_path(picture.id), class: "fa fa-edit fa-lg"%></li>
+  <ul>
+  </figure>
+
   <p class="picture_title"><%= picture.title %></p>
+
   <p><%= picture.content %></p>
 <% end %>
   </div>
